@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="./src/styles/index.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <div class="app">
+      <header>
+        <div class="location-info">
+          <span class="material-symbols-outlined">location_on</span>
+
+          <div>
+            <h3 id="currentLocation">Obteniendo ubicación...</h3>
+            <p id="currentTemp"></p>
+          </div>
+        </div>
+
+        <div class="search-container">
+          <input type="text" id="cityInput" placeholder="Ingrese la ciudad" />
+
+          <button id="searchBtn">
+            <span class="material-symbols-outlined">search</span>
+          </button>
+
+          <div id="suggestions"></div>
+        </div>
+      </header>
+
+      <main>
+        <section class="weather-panel">
+          <h2 id="cityTitle"></h2>
+
+          <div id="weatherData">
+            <div class="placeholder">
+              <span class="material-symbols-outlined icon-large">cloud</span>
+
+              <p>Introduce una ciudad para ver el clima</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="forecast-panel">
+          <h2>Pronóstico de temperatura</h2>
+
+          <canvas id="forecastChart"></canvas>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast"></div>
+
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
