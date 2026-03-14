@@ -56,14 +56,15 @@ La aplicación incluye:
 weather-dashboard
 │
 ├── index.html
+├── README.md
 │
-├── css
-│   └── index.css
-│
-├── js
-│   └── index.js
-│
-└── README.md
+└── src
+    │
+    ├── js
+    │   └── index.js
+    │
+    └── styles
+        └── index.css
 ```
 
 ---
